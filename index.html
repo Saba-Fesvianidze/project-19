@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b05f4c9c1f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <style>
+        *{box-sizing:border-box;}
+        body{
+            padding:0;
+            margin:0;
+            font-family: "Montserrat", sans-serif;
+        }
+        .aside{
+            padding-left:0;
+            margin:0;
+            position:fixed;
+            top:0;
+            bottom:0;
+            left:0;
+            width:300px;
+            background-color:crimson;
+            color:grey;
+            text-align: left;
+            overflow: auto;
+        }
+        .aside .logo{
+            padding-left:55px;
+        }
+        .asidecont ul a{
+            text-decoration:none;
+            color:grey;
+            display:block;
+            padding-top:15px;
+            padding-bottom: 15px;
+            margin:0;
+            font-weight: bolder;
+            text-align: left;
+            padding-left:15px;
+        }
+        .asidecont ul a:hover{
+            background-color:#aaa;
+            color:black;
+        }
+        .asidecont2{
+            margin-top:45px;
+            margin-left:35px;
+        }
+        .asidecont2 a{
+            display:block;
+            text-decoration: none;
+            color:black;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left:15px;
+            text-align: left;
+        }
+        .asidecont2 a:hover{
+            background-color: #aaa;
+        }
+        .main{
+            max-width:1200px;
+            margin:auto;
+        }
+        .maininfo{
+            margin-left:300px;
+            
+        }
+        .header p{
+            font-size:24px;
+            margin-left:12px;
+        }
+        .header p:not(#left){
+            float:right;
+        }
+        .header #left{
+            float:left;
+        }
+        .phmain{
+            position:relative;
+        }
+        .phmain .text1{
+            position:absolute;
+            top:100px;
+            left:30px;
+            color:White;
+            font-size:20px;
+        }
+        #but1{
+            border:none;
+            background-color:black;
+            color:white;
+            padding:10px;
+            width:130px;
+        }
+        #but1:hover{
+            background-color: #aaa;
+            color:black;
+        }
+        .linejeans{
+            display:flex;
+            flex-direction: row;
+            gap:5px;
+            flex-wrap: wrap;
+            color:grey;
+        }
+        .cardjean, .cardjean2, .cardjean3{
+            flex:23%;
+        }
+
+        .cardjean2,.cardjean3{
+            position: relative;
+        }
+        .cardjean2 .text2{
+            position:absolute;
+            top:0;
+            left:0;
+            background-color:black;
+            color:white;
+           width:60px;
+            text-align:center;
+        }
+        .cardjean2 .imghov #but2{
+            position: absolute;
+            top:40%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            display:none;
+            border:none;
+            padding:10px;
+            color:white;
+            background-color:black;
+        }
+        .cardjean2 .imghov #but2:hover{
+            color:black;
+            background-color:#aaa;
+        }
+        .cardjean2 .imghov:hover #but2{
+            display:block;
+        }
+        .cardjean2 img:hover #but2{
+            display:block;
+        }
+        .cardjean3 .text3{
+            position:absolute;
+            top:0;
+            left:0;
+            background-color:black;
+            color:white;
+            width:60px;
+            text-align: center;
+        }
+        .cardjean3 .imghov2 #but3{
+            position:absolute;
+            top:40%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            border:none;
+            color:white;
+            background-color:black;
+            padding:10px;
+            display:none;
+        }
+        .cardjean3 .imghov2:hover #but3{
+            display:block;
+        }
+
+        .cardjean3 .imghov2 #but3:hover{
+            color:black;
+            background-color:#aaa;
+        }
+        .subinfo{
+            background-color:black;
+            padding:20px;
+            color:white;
+        }
+        #input{
+            width:100%;
+            padding:10px;
+        }
+        #but4{
+            border:none;
+            background-color:crimson;
+            color:White;
+            margin-top:10px;
+            padding:10px;
+            width:120px;
+        }
+        #but4:hover{
+            background-color: #aaa;
+            color:black;
+        }
+        .contactinfo{
+            background-color:#f1f1f1;
+            padding:20px;
+        }
+        .flexcontact{
+            display:flex;
+            flex-direction: row;
+            flex-wrap:nowrap;
+            gap:15px;
+        }
+        .flexcontact .thirdflex{
+            flex:33.33%;
+            text-align: center;
+        }
+        .flexcontact .thirdflex2{
+            flex:33.33%;
+        }
+        input[type=text]:not(#input){
+            width:100%;
+            padding:10px;
+            margin-bottom:7px;
+            border:1px solid #aaa;
+        }
+        input[type=submit]{
+            width:100%;
+            padding:5px;
+            border:none;
+            color:white;
+            background-color:crimson;
+        }
+        input[type=submit]:hover{
+            background-color: #aaa;
+            color:black;
+        }
+        .thirdflex a{
+            display:block;
+            margin-bottom:10px;
+            color:black;
+        }
+        .thirdflex2 div i{
+            margin-bottom:20px;   
+        }
+        .iconsweb i{
+            margin-left:5px;
+        }
+        .iconsweb i:hover{
+            opacity:0.8;
+        }
+        .logofar ul{
+            padding:0;
+            margin:0;
+            list-style: none;
+            background-color:black;
+            color:white;
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            z-index:1;
+            display: none;
+        }
+        .logofar ul div:not(#rightl){
+            float:left;
+            padding:13px;
+        }
+        .logofar ul div#rightl{
+            float:right;
+            font-size: 34px;
+            padding:33px;
+            color:white;
+        }
+        .logofar ul div#rightl a{
+            color:white;
+            padding:15px;
+        }
+        .logofar ul div#rightl a:hover{
+            background-color:grey;
+        }
+
+
+        @media only screen and (max-width:1000px){
+            .aside{
+                display:none;
+            }
+            .maininfo{
+                margin-left:0;
+            }
+            .cardjean,.cardjean2,.cardjean3{
+               flex:45%;
+
+            }
+            .logofar ul{
+                display:block;
+            }
+            .main{
+                margin-top:100px;
+            }
+        }
+        @media only screen and (max-width:600px){
+            #notnow{
+                display: none;
+            }
+            #small{
+                font-size:30px;
+            }
+            .flexcontact{
+                font-size:70%;
+            }
+        }
+    </style>
+
+    <div class="logofar">
+        <ul>
+         <div><h1>LOGO</h1></div>
+         <div id="rightl"><a href="#"><i class="fa-sharp fa-solid fa-bars"></i></a></div>
+        </ul>
+    </div>
+
+    <div class="aside">
+        <div class="logo">
+        <h2>LOGO</h2></div>
+        <div class="asidecont">
+            <ul>
+                <a href="#">Shirts</a>
+                <a href="#">Dresses</a>
+                <a href="#">Jeans <i class="fa-sharp fa-solid fa-angle-down"></i></a>
+                <a href="#">Jackets</a>
+                <a href="#">Gymwear</a>
+                <a href="#">Blazers</a>
+                <a href="#">Shoes</a>
+            </ul>
+        </div>
+        <div class="asidecont2">
+            <a href="#">Contact</a>
+            <a href="#">Newsletter</a>
+            <a href="#">Subscribe</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="maininfo">
+            <div class="header">
+                <p id="left">Jeans</p>
+                <p><i class="fa-sharp fa-solid fa-cart-shopping"></i></p>
+                <p><i class="fa-sharp fa-solid fa-magnifying-glass"></i></p>
+            </div>
+            <div class="phmain">
+                <img style="width:100%;height:auto;" src="https://www.w3schools.com/w3images/jeans.jpg" alt="ph">
+                <div class="text1">
+                    <h1 id="small">New arrivals</h1>
+                    <h3 id="notnow">COLLECTION 2016</h3>
+                    <button id="but1">SHOP NOW</button>
+                </div>
+            </div>
+            <p style="color:grey;">8 items</p>
+            <div class="linejeans">
+                <div class="cardjean">
+                    <img style="width:100%;height:auto;" src="https://www.w3schools.com/w3images/jeans1.jpg" alt="jean">
+                    <p>Ripped Skinny Jeans</p>
+                    <p><b>$24.99</b></p>
+                </div>
+                <div class="cardjean2">
+                    <div class="imghov">
+                    <img style="width:100%;height:auto;" src="https://www.w3schools.com/w3images/jeans2.jpg" alt="jean">
+                    <div>
+                        <button  id="but2">Buy now <span><i class="fa-sharp fa-solid fa-cart-shopping"></i></span></button>
+                    </div></div>
+                    <div class="text2">
+                        <p>New</p>
+                    </div>
+                    <p>Mega Ripped Jeans</p>
+                    <p><b>$19.99</b></p>
+                </div>
+                <div class="cardjean">
+                    <img style="width:100%;height:auto;" src="https://www.w3schools.com/w3images/jeans3.jpg" alt="jean">
+                    <p>Washed Skinny Jeans</p>
+                    <p><b>$20.50</b></p>
+                </div>
+                <div class="cardjean">
+                    <img style="width:100%;height:auto;" src="https://www.w3schools.com/w3images/jeans4.jpg" alt="jean">
+                    <p>Vintage Skinny Jeans</p>
+                    <p><b>$14.99</b></p>
+                </div>
+            </div>
+
+            <div class="linejeans">
+                <div class="cardjean">
+                    <img style="width:100%;height:auto;" src="https://www.w3schools.com/w3images/jeans2.jpg" alt="jean">
+                    <p>Mega Ripped Jeans</p>
+                    <p><b>$19.99</b></p>
+                </div>
+                <div class="cardjean">
+                    <img style="width:100%;height:auto;" src="https://www.w3schools.com/w3images/jeans3.jpg" alt="jean">
+                    <p>Washed Skinny Jeans</p>
+                    <p><b>$20.50</b></p>
+                </div>
+                <div class="cardjean3">
+                    <div class="imghov2"><img style="width:100%;height:auto;" src="https://www.w3schools.com/w3images/jeans4.jpg" alt="jean">
+                    <div>
+                        <button id="but3">Buy now <span><i class="fa-sharp fa-solid fa-cart-shopping"></i></span></button>
+                    </div></div>
+                    <div class="text3">
+                        <p>Sale</p>
+                    </div>
+                    <p>Vintage Skinny Jeans</p>
+                    <p><b>$14.99</b></p>
+                </div>
+                <div class="cardjean">
+                    <img style="width:100%;height:auto;" src="https://www.w3schools.com/w3images/jeans1.jpg" alt="jean">
+                    <p>Ripped Skinny Jeans</p>
+                    <p><b>$24.99</b></p>
+                </div>
+            </div>
+
+            <div class="subinfo">
+                <h1>Subscribe</h1>
+                <p>To get special offers and VIP treatment:</p>
+                <input id="input" type="text" placeholder="Enter e-mail">
+                <button id="but4">Subscribe</button>
+            </div>
+
+            <div class="contactinfo">
+                <div class="flexcontact">
+                    <div class="thirdflex">
+                        <h3>Contact</h3>
+                        <p>Questions? Go ahead.</p>
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Subject">
+                        <input type="text" placeholder="Message">
+                        <input type="submit">
+                    </div>
+                    <div class="thirdflex">
+                        <h3>about</h3>
+                        <a href="#">About us</a>
+                        <a href="#">We're hiring</a>
+                        <a href="#">Support</a>
+                        <a href="#">Find store</a>
+                        <a href="#">Shipment</a>
+                        <a href="#">Payment</a>
+                        <a href="#">Gift card</a>
+                        <a href="#">Return</a>
+                        <a href="#">Help</a>
+                    </div>
+                    <div class="thirdflex2">
+                        <h3>Store</h3>
+                        <div><i class="fa-sharp fa-solid fa-location-dot"></i><span>Company Name</span></div>
+                        <div><i class="fa-sharp fa-solid fa-phone"></i><span>0044123123</span></div>
+                        <div><i class="fa-sharp fa-solid fa-envelope"></i><span>ex@mail.com</span></div>
+                        <h3>We accept</h3>
+                        <div><i class="fa-sharp fa-solid fa-credit-card"></i><span>Credit Card</span></div>
+                        <div><i class="fa-sharp fa-solid fa-credit-card"></i><span>Amex</span></div>
+                        <div class="iconsweb">
+                            <i class="fa-brands fa-square-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-snapchat"></i>
+                            <i class="fa-brands fa-pinterest-p"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+ 
+</body>
+</html>
